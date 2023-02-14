@@ -70,3 +70,9 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+const gryffindorStudents = hogwarts
+  .filter(({ house }) => house === "Gryffindor")
+  .map(({ firstName, lastName }) => `${firstName} ${lastName}`);
+
+console.log(gryffindorStudents);

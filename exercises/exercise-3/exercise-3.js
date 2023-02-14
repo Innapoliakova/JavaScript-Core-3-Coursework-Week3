@@ -6,3 +6,15 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+console.log("QTY     ITEM                TOTAL");
+
+let total = 0;
+
+for (const { itemName, quantity, unitPrice } of order) {
+  const itemTotal = quantity * unitPrice;
+  total += itemTotal;
+  console.log(`${quantity}       ${itemName.padEnd(20)}${itemTotal.toFixed(2)}`);
+}
+
+console.log(`\nTotal: ${total.toFixed(2)}`);
